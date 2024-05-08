@@ -19,10 +19,14 @@ public class BasePage {
     public SelenideElement upArrowElement = $("#ak-top");
     public SelenideElement loginButton = $(".account");
 
-    public BasePage() {
+    public BasePage(String subUrl) {
         headerPanel = new HeaderPanel();
         footerPanel = new FooterPanel();
         topPanel = new TopPanel();
+        this.subUrl = subUrl;
+    }
+    public BasePage(){
+        this("");
     }
 
     public void open(){
