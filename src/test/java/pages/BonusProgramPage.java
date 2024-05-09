@@ -1,13 +1,10 @@
 package pages;
 import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import java.util.List;
 
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Condition.*;
 
 public class BonusProgramPage extends BasePage{
     public BonusProgramPage() {
@@ -21,7 +18,7 @@ public class BonusProgramPage extends BasePage{
     public SelenideElement bonusValidationInfo = $("#bonus_main>#bonus_content");
     public ElementsCollection loaderLocators = $$(".loaderPoint");
 
-    public String getTextToAlert(){
+    public String acceptAlert(){
         return confirm();
     }
 
